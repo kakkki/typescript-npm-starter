@@ -1,0 +1,20 @@
+{
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "name": "typescript-npm-starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.1",
+    "typescript": "^3.7.5"
+  }
+}
