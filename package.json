@@ -9,7 +9,8 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "npx http-server -o coverage/lcov-report"
   },
   "keywords": [],
   "author": "",
