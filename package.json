@@ -8,7 +8,8 @@
   "description": "",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
