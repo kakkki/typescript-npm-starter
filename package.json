@@ -9,8 +9,16 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "test": "jest",
-    "coverage": "npx http-server -o coverage/lcov-report"
+    "coverage": "npx http-server -o coverage/lcov-report",
+    "fix": "run-p fix:*",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint --ext js,ts .",
+    "lint:prettier": "prettier -l \"**/*.{json,md,yml}\"",
+    "lint:type": "tsc --noEmit",
+    "test": "run-s lint test:*",
+    "test:unit": "jest"
   },
   "keywords": [],
   "engines": {
