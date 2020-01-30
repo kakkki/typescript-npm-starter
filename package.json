@@ -1,8 +1,11 @@
 {
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
-  "main": "dist/index.js",
+  "main": "dist/lib/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "name": "typescript-npm-starter",
   "version": "1.0.0",
   "description": "",
@@ -11,7 +14,9 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc",
+    "build": "run-p build:*",
+    "build:common": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "coverage": "npx http-server -o coverage/lcov-report",
     "fix": "run-p fix:*",
     "fix:eslint": "npm run lint:eslint -- --fix",
