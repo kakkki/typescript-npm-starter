@@ -6,6 +6,9 @@
   "name": "typescript-npm-starter",
   "version": "1.0.0",
   "description": "",
+  "bin": {
+    "typescript-npm-starter": "dist/bin/index.js"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
