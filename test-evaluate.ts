@@ -1,17 +1,14 @@
-import { main } from "./dist";
-class HelloWorld
-{
-    constructor() {}
+import { main } from './dist'
+class HelloWorld {
+  constructor() {}
 
-    greet()
-    {
-        main();
-        console.log('HelloWorld.greet');
-    }
+  greet() {
+    main()
+    console.log('HelloWorld.greet')
+  }
 }
 
-let hello = new HelloWorld();
-hello.greet();
+const hello = new HelloWorld()
+hello.greet()
 
-
-require('.').main();
+require('.').main()
