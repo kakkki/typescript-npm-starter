@@ -13,6 +13,10 @@
     "coverage": "npx http-server -o coverage/lcov-report"
   },
   "keywords": [],
+  "engines": {
+    "node": ">= 12",
+    "npm": ">= 6.12"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
